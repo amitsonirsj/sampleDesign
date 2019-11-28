@@ -1,0 +1,317 @@
+.widget_header {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-stack-item, .grid-stack, .sub_widget .col-md-4 .sub_widget_content, .sales_widget_labels {
+    background:#f1f0f0;
+}
+
+.grid-stack-item-content {
+    background: white;
+}
+
+.sub_widget {
+    margin: 5px;
+    height: 100%;
+}
+
+#retail, #internal, #waranty, #service_contracts, #MOTs {
+    height: 65px;
+}
+
+#retail {
+    margin-top: 18px;
+}
+
+.row {
+    margin: 0;
+}
+.labels_area {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 0;
+}
+
+.labels_area .labels {
+    font-size: 12px;
+    background: white;
+    padding: 0 8px;
+    height: 18px;
+    font-weight: 600;
+}
+
+.labels_icon_area {
+    display: flex;
+    height: 65px;
+    justify-content: space-around;
+    padding: 6px;
+}
+
+.circular_icon {
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    height: 31px;
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+}
+
+.image {
+    height: 25px;
+}
+
+.image img {
+    height: 100%;
+}
+
+.red_bg {
+    background: red;
+}
+
+.yellow_bg {
+    background: #ffc000;
+}
+
+.green_bg {
+    background: #92d050;
+}
+
+#hourGauge, #hourStacked, #hourLine, #hourIdleGauge {
+    height: 175px;
+}
+
+#workingCapitalChart, #workingCapitalDebtorsChart, #workingCapitalStockChart {
+    height: 100px;
+}
+
+.hours_row .col-md-3, .hours_row .col-md-9 {
+    padding: 0;
+}
+
+.upselling_area, .csi_area {
+    display: flex;
+    height: 40%;
+}
+
+.upselling_type {
+    width: 25%;
+}
+
+.csi_type {
+    width: 50%;
+}
+
+.upselling_type_header, .csi_type_header {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    height: 58px;
+}
+
+.upselling_type_header span, .csi_type_header span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.upselling_type_header img, .csi_type_header img {
+    width: 20px;
+    max-height: 20px;
+}
+
+#upsellingTyreGauge, #upsellingOilGauge, #upsellingServicePlanGauge, #upsellingAirConGauge, #csiMtdGauge, #csiYtdGauge {
+    height: calc(100% - 58px);
+}
+
+#peGauge {
+    height: 55%;
+}
+
+.profitability_row {
+    margin: 5px;
+}
+
+.profitability_row .col-md-6 {
+    display: flex;
+    background: #f1f0f0;
+    padding: 0;
+    border-left: 2px solid white;
+    padding-left: 2px;
+}
+
+.profitability_row_title {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.numbers_area {
+    display: flex;
+    background: white;
+    margin: 4px;
+    width: 100%;
+}
+
+.left_side_numbers {
+    font-size: 12px;
+    text-align: center;
+    width: 50%;
+    border-right: 1px solid #f1f0f0;
+}
+
+.right_side_numbers {
+    text-align: center;
+    width: 50%;
+}
+
+.right_side_numbers img {
+    width: 30%;
+    margin: 3px 7px;
+}
+
+.large_margin {
+    margin: 30px 5px;
+}
+
+.pe_row {
+    height: calc(100% - 30px);
+}
+
+.pe_chart_area {
+    background: #f1f0f0;
+    height: 100%;
+}
+
+.pe_chart_area_title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px;
+    height: 18%;
+}
+
+.pe_labels_area {
+    display: flex;
+    padding: 2px 10px;
+}
+
+.pe_label_text {
+    width: 70%;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.pe_label_bg_col_1 {
+    background: #8ea9db;
+}
+
+.pe_label_bg_col_2 {
+    background: #203664;
+    color: white;
+}
+
+.pe_label_value {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    text-align: center;
+    padding: 0 5px;
+    border: 2px solid white;
+}
+
+.pe_label_circle {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.pe_label_value span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.pe_table_area {
+    height: 100%;
+    background: #f1f0f0;
+}
+
+.pe_table_title {
+    text-align: center;
+    font-weight: 600;
+    padding-top: 10px;
+    border-bottom: 2px solid white;
+}
+
+.border_b_2_w {
+    border-bottom: 2px solid white !important;
+}
+
+.pt8 {
+    padding-top: 6px;
+    padding-bottom: 3px;
+}
+
+.border_b_2_w .pe_label_text {
+    border-right: 2px solid white;
+}
+
+.border_b_2_w .pe_label_value {
+    border: none;
+}
+
+.pe_red {
+    background: #d65532;
+}
+
+.pe_green {
+    background: #69a390;
+}
+
+.pe_yellow {
+    background: #eac282;
+}
+
+.sales_row {
+    height: calc(100% - 30px);
+    display: flex;
+}
+
+.sales_chart_area {
+    height: 100%;
+    width: 75%;
+}
+
+.sales_widget_labels {
+    width: 25%;
+}
+
+.working_charts_area {
+    display: flex;
+}
+
+.working_chart {
+    width: 33.3%;
+}
+
+.working_chart_circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.working_chart_value {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: white;
+}
