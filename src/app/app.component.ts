@@ -499,21 +499,21 @@ export class AppComponent implements OnInit {
     credits: {
       enabled: false
     },
-    tooltip: {
-      borderWidth: 0,
-      backgroundColor: 'none',
-      shadow: false,
-      style: {
-        fontSize: '15px'
-      },
-      pointFormat: '<span style="font-size:20px;color: {point.color}; font-weight: bold">{point.y}</span>',
-      positioner: function (labelWidth) {
-        return {
-          x: (this.chart.chartWidth - labelWidth) / 2,
-          y: (this.chart.plotHeight / 2) + 27
-        };
-      }
-    },
+    // tooltip: {
+    //   borderWidth: 0,
+    //   backgroundColor: 'none',
+    //   shadow: false,
+    //   style: {
+    //     fontSize: '15px'
+    //   },
+    //   pointFormat: '<span style="font-size:20px;color: {point.color}; font-weight: bold">{point.y}</span>',
+    //   positioner: function (labelWidth) {
+    //     return {
+    //       x: (this.chart.chartWidth - labelWidth) / 2,
+    //       y: (this.chart.plotHeight / 2) + 27
+    //     };
+    //   }
+    // },
 
     pane: {
       startAngle: 0,
@@ -552,7 +552,18 @@ export class AppComponent implements OnInit {
     plotOptions: {
       solidgauge: {
         dataLabels: {
-          enabled: false
+          enabled: true,
+          y: -18,
+          borderWidth: 0,
+          backgroundColor: 'none',
+          useHTML: true,
+          shadow: false,
+          style: {
+            fontSize: '18px'
+          },
+          formatter: function () {
+            return '74';
+          }
         },
         linecap: 'round',
         stickyTracking: false
@@ -601,21 +612,21 @@ export class AppComponent implements OnInit {
     credits: {
       enabled: false
     },
-    tooltip: {
-      borderWidth: 0,
-      backgroundColor: 'none',
-      shadow: false,
-      style: {
-        fontSize: '15px'
-      },
-      pointFormat: '<span style="font-size:20px;color: {point.color}; font-weight: bold">{point.y}</span>',
-      positioner: function (labelWidth) {
-        return {
-          x: (this.chart.chartWidth - labelWidth) / 2,
-          y: (this.chart.plotHeight / 2) + 27
-        };
-      }
-    },
+    // tooltip: {
+    //   borderWidth: 0,
+    //   backgroundColor: 'none',
+    //   shadow: false,
+    //   style: {
+    //     fontSize: '15px'
+    //   },
+    //   pointFormat: '<span style="font-size:20px;color: {point.color}; font-weight: bold">{point.y}</span>',
+    //   positioner: function (labelWidth) {
+    //     return {
+    //       x: (this.chart.chartWidth - labelWidth) / 2,
+    //       y: (this.chart.plotHeight / 2) + 27
+    //     };
+    //   }
+    // },
 
     pane: {
       startAngle: 0,
@@ -654,7 +665,18 @@ export class AppComponent implements OnInit {
     plotOptions: {
       solidgauge: {
         dataLabels: {
-          enabled: false
+          enabled: true,
+          y: -18,
+          borderWidth: 0,
+          backgroundColor: 'none',
+          useHTML: true,
+          shadow: false,
+          style: {
+            fontSize: '18px'
+          },
+          formatter: function () {
+            return '12';
+          }
         },
         linecap: 'round',
         stickyTracking: false
@@ -700,18 +722,18 @@ export class AppComponent implements OnInit {
     credits: {
       enabled: false
     },
-    tooltip: {
-      borderWidth: 0,
-      backgroundColor: 'none',
-      shadow: false,
-      pointFormat: '<span style="font-size:12px;color: {point.color}; font-weight: bold">₤{point.y}</span>',
-      positioner: function (labelWidth) {
-        return {
-          x: (this.chart.chartWidth - labelWidth) / 2,
-          y: (this.chart.plotHeight / 2) - 5
-        };
-      }
-    },
+    // tooltip: {
+    //   borderWidth: 0,
+    //   backgroundColor: 'none',
+    //   shadow: false,
+    //   pointFormat: '<span style="font-size:12px;color: {point.color}; font-weight: bold">₤{point.y}</span>',
+    //   positioner: function (labelWidth) {
+    //     return {
+    //       x: (this.chart.chartWidth - labelWidth) / 2,
+    //       y: (this.chart.plotHeight / 2) - 5
+    //     };
+    //   }
+    // },
 
     pane: {
       startAngle: 0,
@@ -750,7 +772,18 @@ export class AppComponent implements OnInit {
     plotOptions: {
       solidgauge: {
         dataLabels: {
-          enabled: false
+          enabled: true,
+          y: -12,
+          borderWidth: 0,
+          backgroundColor: 'none',
+          useHTML: true,
+          shadow: false,
+          style: {
+            fontSize: '10px'
+          },
+          formatter: function () {
+            return '788';
+          }
         },
         linecap: 'round',
         stickyTracking: false
