@@ -1,5 +1,5 @@
-<div class="grid-stack">
-  <div class="grid-stack-item" data-gs-x="0" data-gs-y="0" data-gs-width="5" data-gs-height="5">
+<div class="grid-stack" [ngStyle]="{'background-color':BackgroundColor}">
+  <div class="grid-stack-item" [ngStyle]="{'background-color':BackgroundColor}" data-gs-x="0" data-gs-y="0" data-gs-width="5" data-gs-height="5">
     <div class="grid-stack-item-content">
       <div class="widget_header">Hours</div>
       <div class="row hours_row">
@@ -20,42 +20,42 @@
       </div>
     </div>
   </div>
-  <div class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="4" data-gs-height="5">
+  <div class="grid-stack-item" [ngStyle]="{'background-color':BackgroundColor}" data-gs-x="5" data-gs-y="0" data-gs-width="4" data-gs-height="5">
     <div class="grid-stack-item-content">
       <div class="widget_header">Upselling</div>
       <div class="upselling_area">
         <div class="upselling_type">
           <div class="upselling_type_header">
             <span>Tyres</span>
-            <img src="../assets/images/up.png">
+            <div id="triangle-up" [ngStyle]="{'border-bottom-color':GreenRagColor}"></div>
           </div>
           <div #upsellingTyreGauge id="upsellingTyreGauge"></div>
         </div>
         <div class="upselling_type">
           <div class="upselling_type_header">
             <span>Oil</span>
-            <img src="../assets/images/right.png">
+            <div id="triangle-right" [ngStyle]="{'border-left-color':AmberRagColor}"></div>
           </div>
           <div #upsellingOilGauge id="upsellingOilGauge"></div>
         </div>
         <div class="upselling_type">
           <div class="upselling_type_header">
             <span>Service Plans</span>
-            <img src="../assets/images/up.png">
+            <div id="triangle-up" [ngStyle]="{'border-bottom-color':GreenRagColor}"></div>
           </div>
           <div #upsellingServicePlanGauge id="upsellingServicePlanGauge"></div>
         </div>
         <div class="upselling_type">
           <div class="upselling_type_header">
             <span>Air Con</span>
-            <img src="../assets/images/down.png">
+            <div id="triangle-down" [ngStyle]="{'border-top-color':RedRagColor}"></div>
           </div>
           <div #upsellingAirConGauge id="upsellingAirConGauge"></div>
         </div>
       </div>
       <div class="widget_header">Profitability</div>
       <div class="row profitability_row">
-        <div class="col-md-6">
+        <div class="col-md-6" [ngStyle]="{'background-color':BackgroundColor}">
           <span class="profitability_row_title">Sales</span>
           <div class="numbers_area">
             <div class="left_side_numbers">
@@ -66,7 +66,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" [ngStyle]="{'background-color':BackgroundColor}">
           <span class="profitability_row_title">Profit</span>
           <div class="numbers_area">
             <div class="left_side_numbers">
@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="row profitability_row large_margin">
-        <div class="col-md-6">
+        <div class="col-md-6" [ngStyle]="{'background-color':BackgroundColor}">
           <span class="profitability_row_title">Sales</span>
           <div class="numbers_area">
             <div class="left_side_numbers">
@@ -90,7 +90,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" [ngStyle]="{'background-color':BackgroundColor}">
           <span class="profitability_row_title">Profit</span>
           <div class="numbers_area">
             <div class="left_side_numbers">
@@ -104,21 +104,21 @@
       </div>
     </div>
   </div>
-  <div class="grid-stack-item" data-gs-x="9" data-gs-y="0" data-gs-width="3" data-gs-height="5">
+  <div class="grid-stack-item" [ngStyle]="{'background-color':BackgroundColor}" data-gs-x="9" data-gs-y="0" data-gs-width="3" data-gs-height="5">
     <div class="grid-stack-item-content">
       <div class="widget_header">CSI</div>
       <div class="csi_area">
         <div class="csi_type">
           <div class="csi_type_header">
             <span>MTD</span>
-            <img src="../assets/images/up.png">
+            <div id="triangle-up" [ngStyle]="{'border-bottom-color':GreenRagColor}"></div>
           </div>
           <div #csiMtdGauge id="csiMtdGauge"></div>
         </div>
         <div class="csi_type">
           <div class="csi_type_header">
             <span>YTD</span>
-            <img src="../assets/images/up.png">
+            <div id="triangle-up" [ngStyle]="{'border-bottom-color':GreenRagColor}"></div>
           </div>
           <div #csiYtdGauge id="csiYtdGauge"></div>
         </div>
@@ -128,25 +128,25 @@
         <div class="working_chart">
           <div #workingCapitalChart id="workingCapitalChart"></div>
           <div class="working_chart_circle">
-            <div class="working_chart_value red_bg">83.3%</div>
+            <div class="working_chart_value" [ngStyle]="{'background-color':RedRagColor}">83.3%</div>
           </div>
         </div>
         <div class="working_chart">
           <div #workingCapitalDebtorsChart id="workingCapitalDebtorsChart"></div>
           <div class="working_chart_circle">
-            <div class="working_chart_value green_bg">118%</div>
+            <div class="working_chart_value" [ngStyle]="{'background-color':GreenRagColor}">118%</div>
           </div>
         </div>
         <div class="working_chart">
           <div #workingCapitalStockChart id="workingCapitalStockChart"></div>
           <div class="working_chart_circle">
-            <div class="working_chart_value yellow_bg">98%</div>
+            <div class="working_chart_value" [ngStyle]="{'background-color':AmberRagColor}">98%</div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="grid-stack-item" data-gs-x="0" data-gs-y="5" data-gs-width="5" data-gs-height="5">
+  <div class="grid-stack-item" [ngStyle]="{'background-color':BackgroundColor}" data-gs-x="0" data-gs-y="5" data-gs-width="5" data-gs-height="5">
     <div class="grid-stack-item-content">
       <div class="widget_header">Sales by Type</div>
       <div class="sales_row">
@@ -157,123 +157,123 @@
           <div #service_contracts id="service_contracts"></div>
           <div #MOTs id="MOTs"></div>
         </div>
-        <div class="sales_widget_labels">
+        <div class="sales_widget_labels" [ngStyle]="{'background-color':BackgroundColor}">
           <div class="labels_area">
             <div class="labels">Mix</div>
             <div class="labels">Trend</div>
           </div>
           <div class="labels_icon_area">
-            <div class="circular_icon red_bg">40%</div>
+            <div class="circular_icon" [ngStyle]="{'background-color':RedRagColor}">40%</div>
             <div class="image">
-              <img src="../assets/images/up.png">
+              <div id="triangle-up" [ngStyle]="{'border-bottom-color':RedRagColor}"></div>
             </div>
           </div>
           <div class="labels_icon_area">
-            <div class="circular_icon yellow_bg">27%</div>
+            <div class="circular_icon" [ngStyle]="{'background-color':AmberRagColor}">27%</div>
             <div class="image">
-              <img src="../assets/images/right.png">
+              <div id="triangle-right" [ngStyle]="{'border-left-color':AmberRagColor}"></div>
             </div>
           </div>
           <div class="labels_icon_area">
-            <div class="circular_icon red_bg">20%</div>
+            <div class="circular_icon" [ngStyle]="{'background-color':RedRagColor}">20%</div>
             <div class="image">
-              <img src="../assets/images/up.png">
+              <div id="triangle-up" [ngStyle]="{'border-bottom-color':GreenRagColor}"></div>
             </div>
           </div>
           <div class="labels_icon_area">
-            <div class="circular_icon green_bg">40%</div>
+            <div class="circular_icon" [ngStyle]="{'background-color':GreenRagColor}">40%</div>
             <div class="image">
-              <img src="../assets/images/right.png">
+              <div id="triangle-right" [ngStyle]="{'border-left-color':AmberRagColor}"></div>
             </div>
           </div>
           <div class="labels_icon_area">
-            <div class="circular_icon green_bg">40%</div>
+            <div class="circular_icon" [ngStyle]="{'background-color':GreenRagColor}">40%</div>
             <div class="image">
-              <img src="../assets/images/down.png">
+              <div id="triangle-down" [ngStyle]="{'border-top-color':RedRagColor}"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="grid-stack-item" data-gs-x="5" data-gs-y="5" data-gs-width="7" data-gs-height="5">
+  <div class="grid-stack-item" [ngStyle]="{'background-color':BackgroundColor}" data-gs-x="5" data-gs-y="5" data-gs-width="7" data-gs-height="5">
     <div class="grid-stack-item-content">
       <div class="widget_header">Productivity & Efficiency</div>
       <div class="row pe_row">
         <div class="col-md-4">
-          <div class="pe_table_area">
+          <div class="pe_table_area" [ngStyle]="{'background-color':BackgroundColor}">
             <div class="pe_table_title">Service Advisers</div>
             <div class="pe_labels_area border_b_2_w">
               <div class="pe_label_text pt8">Mike Smith</div>
               <div class="pe_label_value pt8">
-                <div class="pe_label_circle pe_green"></div>
+                <div class="pe_label_circle" [ngStyle]="{'background-color':GreenRagColor}"></div>
                 <span>88</span>
               </div>
             </div>
             <div class="pe_labels_area border_b_2_w">
               <div class="pe_label_text pt8">Laura Morris</div>
               <div class="pe_label_value pt8">
-                <div class="pe_label_circle pe_green"></div>
+                <div class="pe_label_circle" [ngStyle]="{'background-color':GreenRagColor}"></div>
                 <span>86</span>
               </div>
             </div>
             <div class="pe_labels_area border_b_2_w">
               <div class="pe_label_text pt8">John Doe</div>
               <div class="pe_label_value pt8">
-                <div class="pe_label_circle pe_yellow"></div>
+                <div class="pe_label_circle" [ngStyle]="{'background-color':AmberRagColor}"></div>
                 <span>71</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="pe_table_area">
+          <div class="pe_table_area" [ngStyle]="{'background-color':BackgroundColor}">
             <div class="pe_table_title">Technicians</div>
             <div class="pe_labels_area border_b_2_w">
               <div class="pe_label_text pt8">Mike Smith</div>
               <div class="pe_label_value pt8">
-                <div class="pe_label_circle pe_green"></div>
+                <div class="pe_label_circle" [ngStyle]="{'background-color':GreenRagColor}"></div>
                 <span>88</span>
               </div>
             </div>
             <div class="pe_labels_area border_b_2_w">
               <div class="pe_label_text pt8">Laura Morris</div>
               <div class="pe_label_value pt8">
-                <div class="pe_label_circle pe_green"></div>
+                <div class="pe_label_circle" [ngStyle]="{'background-color':GreenRagColor}"></div>
                 <span>86</span>
               </div>
             </div>
             <div class="pe_labels_area border_b_2_w">
               <div class="pe_label_text pt8">John Doe</div>
               <div class="pe_label_value pt8">
-                <div class="pe_label_circle pe_yellow"></div>
+                <div class="pe_label_circle" [ngStyle]="{'background-color':AmberRagColor}"></div>
                 <span>71</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="pe_chart_area">
+          <div class="pe_chart_area" [ngStyle]="{'background-color':BackgroundColor}">
             <div class="pe_chart_area_title">Neil Burgess</div>
             <div #peGauge id="peGauge"></div>
             <div class="pe_labels_area">
               <div class="pe_label_text pe_label_bg_col_1">Efficiency %</div>
               <div class="pe_label_value">
-                <div class="pe_label_circle pe_yellow"></div>
+                <div class="pe_label_circle" [ngStyle]="{'background-color':AmberRagColor}"></div>
                 <span>90%</span>
               </div>
             </div>
             <div class="pe_labels_area">
               <div class="pe_label_text pe_label_bg_col_2">VHCs completed</div>
               <div class="pe_label_value">
-                <div class="pe_label_circle pe_green"></div>
+                <div class="pe_label_circle" [ngStyle]="{'background-color':GreenRagColor}"></div>
                 <span>100%</span>
               </div>
             </div>
             <div class="pe_labels_area">
               <div class="pe_label_text pe_label_bg_col_2">First Time Fix %</div>
               <div class="pe_label_value">
-                <div class="pe_label_circle pe_red"></div>
+                <div class="pe_label_circle" [ngStyle]="{'background-color':RedRagColor}"></div>
                 <span>72%</span>
               </div>
             </div>

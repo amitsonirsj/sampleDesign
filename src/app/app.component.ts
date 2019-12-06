@@ -9,6 +9,22 @@ import { HighchartsService } from './highcharts.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  ActualSerieColor: string = 'black';
+  BugetSerieColor: string = '#7030a0';
+  ForecastSerieColor: string = '#00b0f0';
+
+  GaugeChartValueBackgroundColor: string = '#ffc000';
+
+  EfficiencySerieColor: string = '#203764';
+  VHCsCompletedSerieColor: string = '#2e75b6';
+  FirstTimeFixColor: string = '#bdd7ee';
+
+  GreenRagColor: string = '#92d050';
+  AmberRagColor: string = '#ffc000';
+  RedRagColor: string = 'red';
+
+  BackgroundColor: string = '#f1f0f0';
+
   @ViewChild('retail', { static: true }) public retail: ElementRef;
   @ViewChild('internal', { static: true }) public internal: ElementRef;
   @ViewChild('waranty', { static: true }) public waranty: ElementRef;
@@ -76,7 +92,7 @@ export class AppComponent implements OnInit {
       series: {
         pointPadding: 0.25,
         borderWidth: 0,
-        color: '#7030a0',
+        color: this.BugetSerieColor,
         targetOptions: {
           width: '200%'
         }
@@ -87,11 +103,11 @@ export class AppComponent implements OnInit {
       plotBands: [{
         from: 0,
         to: 20,
-        color: 'black'
+        color: this.ActualSerieColor
       }, {
         from: 20,
         to: 25,
-        color: '#00b0f0'
+        color: this.ForecastSerieColor
       }, {
         from: 25,
         to: 100,
@@ -141,7 +157,7 @@ export class AppComponent implements OnInit {
       series: {
         pointPadding: 0.25,
         borderWidth: 0,
-        color: '#7030a0',
+        color: this.BugetSerieColor,
         targetOptions: {
           width: '200%'
         }
@@ -152,11 +168,11 @@ export class AppComponent implements OnInit {
       plotBands: [{
         from: 0,
         to: 15,
-        color: 'black'
+        color: this.ActualSerieColor
       }, {
         from: 15,
         to: 20,
-        color: '#00b0f0'
+        color: this.ForecastSerieColor
       }, {
         from: 20,
         to: 100,
@@ -203,7 +219,7 @@ export class AppComponent implements OnInit {
       series: {
         pointPadding: 0.25,
         borderWidth: 0,
-        color: '#7030a0',
+        color: this.BugetSerieColor,
         targetOptions: {
           width: '200%'
         }
@@ -214,11 +230,11 @@ export class AppComponent implements OnInit {
       plotBands: [{
         from: 0,
         to: 13,
-        color: 'black'
+        color: this.ActualSerieColor
       }, {
         from: 13,
         to: 18,
-        color: '#00b0f0'
+        color: this.ForecastSerieColor
       }, {
         from: 18,
         to: 100,
@@ -265,7 +281,7 @@ export class AppComponent implements OnInit {
       series: {
         pointPadding: 0.25,
         borderWidth: 0,
-        color: '#7030a0',
+        color: this.BugetSerieColor,
         targetOptions: {
           width: '200%'
         }
@@ -276,11 +292,11 @@ export class AppComponent implements OnInit {
       plotBands: [{
         from: 0,
         to: 10,
-        color: 'black'
+        color: this.ActualSerieColor
       }, {
         from: 10,
         to: 15,
-        color: '#00b0f0'
+        color: this.ForecastSerieColor
       }, {
         from: 15,
         to: 100,
@@ -327,7 +343,7 @@ export class AppComponent implements OnInit {
       series: {
         pointPadding: 0.25,
         borderWidth: 0,
-        color: '#7030a0',
+        color: this.BugetSerieColor,
         targetOptions: {
           width: '200%'
         }
@@ -338,11 +354,11 @@ export class AppComponent implements OnInit {
       plotBands: [{
         from: 0,
         to: 15,
-        color: 'black'
+        color: this.ActualSerieColor
       }, {
         from: 5,
         to: 10,
-        color: '#00b0f0'
+        color: this.ForecastSerieColor
       }, {
         from: 10,
         to: 100,
@@ -408,11 +424,11 @@ export class AppComponent implements OnInit {
     series: [{
       name: 'John',
       data: [5, 3, 4, 7, 2],
-      color: 'black'
+      color: this.ActualSerieColor
     }, {
       name: 'Jane',
       data: [2, 2, 3, 2, 1],
-      color: '#00b0f0'
+      color: this.ForecastSerieColor
     }]
   }
 
@@ -463,7 +479,7 @@ export class AppComponent implements OnInit {
       marker: {
         enabled: false
       },
-      lineColor: '#28b7f1',
+      lineColor: this.ForecastSerieColor,
       data: [55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55]
 
     },
@@ -472,14 +488,14 @@ export class AppComponent implements OnInit {
       marker: {
         enabled: false
       },
-      lineColor: '#7030a0',
+      lineColor: this.BugetSerieColor,
       data: [45, 65, 50, 47, 52, 49, 49, 49, 49, 49, 49, 49]
     }, {
       name: 'Actual',
       marker: {
         enabled: false
       },
-      lineColor: 'black',
+      lineColor: this.ActualSerieColor,
       data: [45, 65, 50, 47, 52, 49]
     }]
   }
@@ -499,21 +515,9 @@ export class AppComponent implements OnInit {
     credits: {
       enabled: false
     },
-    // tooltip: {
-    //   borderWidth: 0,
-    //   backgroundColor: 'none',
-    //   shadow: false,
-    //   style: {
-    //     fontSize: '15px'
-    //   },
-    //   pointFormat: '<span style="font-size:20px;color: {point.color}; font-weight: bold">{point.y}</span>',
-    //   positioner: function (labelWidth) {
-    //     return {
-    //       x: (this.chart.chartWidth - labelWidth) / 2,
-    //       y: (this.chart.plotHeight / 2) + 27
-    //     };
-    //   }
-    // },
+    tooltip: {
+      enabled: false
+    },
 
     pane: {
       startAngle: 0,
@@ -537,7 +541,7 @@ export class AppComponent implements OnInit {
       {
         outerRadius: '37%',
         innerRadius: '0%',
-        backgroundColor: '#ffc000',
+        backgroundColor: this.GaugeChartValueBackgroundColor,
         borderWidth: 0
       }]
     },
@@ -573,7 +577,7 @@ export class AppComponent implements OnInit {
     series: [{
       name: 'Move',
       data: [{
-        color: '#7030a0',
+        color: this.BugetSerieColor,
         radius: '112%',
         innerRadius: '88%',
         y: 100
@@ -581,7 +585,7 @@ export class AppComponent implements OnInit {
     }, {
       name: 'Exercise',
       data: [{
-        color: '#00b0f0',
+        color: this.ForecastSerieColor,
         radius: '87%',
         innerRadius: '63%',
         y: 80
@@ -589,7 +593,7 @@ export class AppComponent implements OnInit {
     }, {
       name: 'Stand',
       data: [{
-        color: 'black',
+        color: this.ActualSerieColor,
         radius: '62%',
         innerRadius: '38%',
         y: 20
@@ -612,21 +616,9 @@ export class AppComponent implements OnInit {
     credits: {
       enabled: false
     },
-    // tooltip: {
-    //   borderWidth: 0,
-    //   backgroundColor: 'none',
-    //   shadow: false,
-    //   style: {
-    //     fontSize: '15px'
-    //   },
-    //   pointFormat: '<span style="font-size:20px;color: {point.color}; font-weight: bold">{point.y}</span>',
-    //   positioner: function (labelWidth) {
-    //     return {
-    //       x: (this.chart.chartWidth - labelWidth) / 2,
-    //       y: (this.chart.plotHeight / 2) + 27
-    //     };
-    //   }
-    // },
+    tooltip: {
+      enabled: false
+    },
 
     pane: {
       startAngle: 0,
@@ -650,7 +642,7 @@ export class AppComponent implements OnInit {
       {
         outerRadius: '37%',
         innerRadius: '0%',
-        backgroundColor: '#ffc000',
+        backgroundColor: this.GaugeChartValueBackgroundColor,
         borderWidth: 0
       }]
     },
@@ -686,7 +678,7 @@ export class AppComponent implements OnInit {
     series: [{
       name: 'Move',
       data: [{
-        color: '#7030a0',
+        color: this.BugetSerieColor,
         radius: '112%',
         innerRadius: '88%',
         y: 100
@@ -694,7 +686,7 @@ export class AppComponent implements OnInit {
     }, {
       name: 'Exercise',
       data: [{
-        color: '#00b0f0',
+        color: this.ForecastSerieColor,
         radius: '87%',
         innerRadius: '63%',
         y: 80
@@ -702,7 +694,7 @@ export class AppComponent implements OnInit {
     }, {
       name: 'Stand',
       data: [{
-        color: 'black',
+        color: this.ActualSerieColor,
         radius: '62%',
         innerRadius: '38%',
         y: 20
@@ -722,18 +714,9 @@ export class AppComponent implements OnInit {
     credits: {
       enabled: false
     },
-    // tooltip: {
-    //   borderWidth: 0,
-    //   backgroundColor: 'none',
-    //   shadow: false,
-    //   pointFormat: '<span style="font-size:12px;color: {point.color}; font-weight: bold">₤{point.y}</span>',
-    //   positioner: function (labelWidth) {
-    //     return {
-    //       x: (this.chart.chartWidth - labelWidth) / 2,
-    //       y: (this.chart.plotHeight / 2) - 5
-    //     };
-    //   }
-    // },
+    tooltip: {
+      enabled: false
+    },
 
     pane: {
       startAngle: 0,
@@ -757,7 +740,7 @@ export class AppComponent implements OnInit {
       {
         outerRadius: '37%',
         innerRadius: '0%',
-        backgroundColor: '#ffc000',
+        backgroundColor: this.GaugeChartValueBackgroundColor,
         borderWidth: 0
       }]
     },
@@ -793,7 +776,7 @@ export class AppComponent implements OnInit {
     series: [{
       name: 'Move',
       data: [{
-        color: '#7030a0',
+        color: this.BugetSerieColor,
         radius: '112%',
         innerRadius: '88%',
         y: 100
@@ -801,7 +784,7 @@ export class AppComponent implements OnInit {
     }, {
       name: 'Exercise',
       data: [{
-        color: '#00b0f0',
+        color: this.ForecastSerieColor,
         radius: '87%',
         innerRadius: '63%',
         y: 80
@@ -809,7 +792,7 @@ export class AppComponent implements OnInit {
     }, {
       name: 'Stand',
       data: [{
-        color: 'black',
+        color: this.ActualSerieColor,
         radius: '62%',
         innerRadius: '38%',
         y: 20
@@ -821,7 +804,7 @@ export class AppComponent implements OnInit {
 
     chart: {
       type: 'solidgauge',
-      backgroundColor: '#f1f0f0'
+      backgroundColor: this.BackgroundColor
     },
 
     title: {
@@ -831,16 +814,7 @@ export class AppComponent implements OnInit {
       enabled: false
     },
     tooltip: {
-      borderWidth: 0,
-      backgroundColor: 'none',
-      shadow: false,
-      pointFormat: '<span style="font-size:12px;color: {point.color}; font-weight: bold">₤{point.y}</span>',
-      positioner: function (labelWidth) {
-        return {
-          x: (this.chart.chartWidth - labelWidth) / 2,
-          y: (this.chart.plotHeight / 2) - 5
-        };
-      }
+      enabled: false
     },
 
     pane: {
@@ -890,7 +864,7 @@ export class AppComponent implements OnInit {
     series: [{
       name: 'Move',
       data: [{
-        color: '#203764',
+        color: this.EfficiencySerieColor,
         radius: '112%',
         innerRadius: '88%',
         y: 100
@@ -898,7 +872,7 @@ export class AppComponent implements OnInit {
     }, {
       name: 'Exercise',
       data: [{
-        color: '#2e75b6',
+        color: this.VHCsCompletedSerieColor,
         radius: '87%',
         innerRadius: '63%',
         y: 80
@@ -906,7 +880,7 @@ export class AppComponent implements OnInit {
     }, {
       name: 'Stand',
       data: [{
-        color: '#bdd7ee',
+        color: this.FirstTimeFixColor,
         radius: '62%',
         innerRadius: '38%',
         y: 20
@@ -935,7 +909,7 @@ export class AppComponent implements OnInit {
       series: {
         pointPadding: 0.25,
         borderWidth: 0,
-        color: '#7030a0',
+        color: this.BugetSerieColor,
         targetOptions: {
           width: '200%'
         }
@@ -946,7 +920,7 @@ export class AppComponent implements OnInit {
       plotBands: [{
         from: 0,
         to: 20,
-        color: 'black'
+        color: this.ActualSerieColor
       }, {
         from: 20,
         to: 25,

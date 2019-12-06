@@ -6,10 +6,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.grid-stack-item, .grid-stack, .sub_widget .col-md-4 .sub_widget_content, .sales_widget_labels {
-    background:#f1f0f0;
-}
-
 .grid-stack-item-content {
     background: white;
 }
@@ -89,6 +85,24 @@
     height: 100px;
 }
 
+#triangle-up {
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 25px solid;
+  }
+
+#triangle-down {
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 25px solid;
+}
+
+#triangle-right {
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 25px solid;
+}
+
 .hours_row .col-md-3, .hours_row .col-md-9 {
     padding: 0;
 }
@@ -123,6 +137,11 @@
     max-height: 20px;
 }
 
+.upselling_type_header #triangle-up, .upselling_type_header #triangle-down, .upselling_type_header #triangle-right, .csi_type_header #triangle-up, .csi_type_header #triangle-down, .csi_type_header #triangle-right {
+    width: 20px;
+    max-height: 20px;
+}
+
 #upsellingTyreGauge, #upsellingOilGauge, #upsellingServicePlanGauge, #upsellingAirConGauge, #csiMtdGauge, #csiYtdGauge {
     height: calc(100% - 58px);
 }
@@ -137,7 +156,6 @@
 
 .profitability_row .col-md-6 {
     display: flex;
-    background: #f1f0f0;
     padding: 0;
     border-left: 2px solid white;
     padding-left: 2px;
@@ -181,7 +199,6 @@
 }
 
 .pe_chart_area {
-    background: #f1f0f0;
     height: 100%;
 }
 
@@ -238,7 +255,6 @@
 
 .pe_table_area {
     height: 100%;
-    background: #f1f0f0;
 }
 
 .pe_table_title {
